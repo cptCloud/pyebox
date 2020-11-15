@@ -42,6 +42,13 @@ Print help
       -t TIMEOUT, --timeout TIMEOUT
                             Request timeout
 
+Docker
+#######
+::
+docker build -t pyebox .
+::
+docker run -e PYEBOX_MYACCOUNT=*** -e PYEBOX_MYPASSWORD=*** pyebox
+
 Dev env
 #######
 
