@@ -14,7 +14,8 @@ setup(name='pyebox',
       packages=['pyebox'],
       entry_points={
           'console_scripts': [
-              'pyebox = pyebox.__main__:main'
+              'pyebox = pyebox.__main__:main',
+              'mqtt_pyebox = pyebox.__main__:mqtt_daemon'
           ]
       },
       license='Apache 2.0',

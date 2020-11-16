@@ -4,6 +4,7 @@ import json
 import sys
 
 from pyebox import EboxClient, REQUESTS_TIMEOUT, PyEboxError
+from pyebox.mqtt_daemon import MqttEbox
 
 
 def _format_output(account, data):
@@ -39,7 +40,7 @@ Total:    {d[total]:.2f} Gb
 Limit:    {d[limit]:.2f} Gb
 """)
     print(output.format(d=data))
-
+    
 
 def main():
     """Main function"""
@@ -72,6 +73,10 @@ def main():
         _format_output(args.username, client.get_data())
     client.close_session()
 
+def mqtt_daemon():
+    """Entrypoint function."""
+    dev = MqttEbox()
+    asyncio.run(dev.async_run())
 
 if __name__ == '__main__':
     sys.exit(main())

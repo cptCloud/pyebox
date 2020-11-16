@@ -1,2 +1,4 @@
 aiohttp
 bs4
+mqtt-hass-base==0.1.4
+PyYAML==5.1.2

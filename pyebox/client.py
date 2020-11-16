@@ -189,7 +189,7 @@ class EboxClient(object):
         """Return collected data"""
         return self._data
 
-    def close_session(self):
+    async def close_session(self):
         """Close current session."""
         if not self._session.closed:
             if self._session._connector_owner:
