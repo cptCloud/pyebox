@@ -41,7 +41,14 @@ Print help
       -j, --json            Json output
       -t TIMEOUT, --timeout TIMEOUT
                             Request timeout
-
+                            
+MQTT_deamon
+#######
+::
+cp config.yaml.sample config.yaml
+::
+docker run -e PYEBOX_MYACCOUNT=*** -e PYEBOX_MYPASSWORD=*** -e PYEBOX_OUTPUT=MQTT -e MQTT_USERNAME=mqtt_username -e MQTT_PASSWORD=mqtt_password -e MQTT_HOST=mqtt_ip -e MQTT_PORT=mqtt_port -e ROOT_TOPIC=homeassistant -e MQTT_NAME=ebox pyebox
+    
 Docker
 #######
 ::

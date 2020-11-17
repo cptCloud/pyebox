@@ -1,0 +1,8 @@
+# THIS YAML CAN CHANGE IN THE FUTURE
+timeout: 30
+# If frequency is not set the "daemon" will collect the data only one time and stop
+# 24 hours
+frequency: 86400
+accounts:
+- username: USERNAME
+  password: PASSWORD
