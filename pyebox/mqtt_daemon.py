@@ -2,7 +2,6 @@
 And send it to MQTT using Home-Assistant format.
 """
 import asyncio
-from datetime import datetime, timedelta
 import json
 import os
 import uuid
