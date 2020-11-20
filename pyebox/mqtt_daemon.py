@@ -106,7 +106,7 @@ class MqttEbox(mqtt_hass_base.MqttDevice):
                     payload=fetched_data['usage'])
 
             # Before offpeak and offpeak data
-            for data_name in USAGE_MAP.items():
+            for data_name in USAGE_MAP:
                 # Publish sensor
                 sensor_topic = self._publish_sensor(data_name,
                                                     account['username'],
